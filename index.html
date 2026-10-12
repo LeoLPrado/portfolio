@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Leonardo Prado — Portfolio</title>
-<meta name="description" content="Portfólio de Leonardo Prado">
+<title>Leonardo Prado - Portfolio</title>
+<meta name="description" content="Portfólio de Leonardo Prado: Engenharia de Software e Engenharia de Dados.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E💻%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -158,7 +158,7 @@ function put(el,t,h){if(h){el.innerHTML=t}else if(el.children.length){el.lastChi
 function apply(l){
 D.forEach(function(d){var a=d[l==='en'?2:1];$(d[0]).forEach(function(el,i){if(a[i]!=null)put(el,a[i],d[3])})});
 r.lang=l==='en'?'en':'pt-BR';$('.nx').forEach(function(n){var pv=n.classList.contains('pv');n.setAttribute('aria-label',l==='en'?(pv?'Previous project':'Next project'):(pv?'Projeto anterior':'Próximo projeto'))});
-document.title=l==='en'?'Leonardo Prado — Software and Data Engineering':'Leonardo Prado — Engenharia de Software e Dados';
+document.title='Leonardo Prado - Portfolio';
 var b=document.querySelector('.lang');b.textContent=l==='en'?'PT':'EN';b.setAttribute('aria-label',l==='en'?'Traduzir para português':'Translate to English');
 }
 function setLang(l,anim){
