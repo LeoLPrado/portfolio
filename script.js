@@ -37,21 +37,21 @@
     [
       '.about',
       [
-        'Estudante de Engenharia de Software no Instituto Nacional de Telecomunicações (INATEL), atualmente no 4º período, com formação prevista para 2029. Reconhecido pela excelência acadêmica, com média semestral acima de 90.',
+        'Estudante de Engenharia de Software no Instituto Nacional de Telecomunicações (Inatel), atualmente no 4º período, com formação prevista para 2029. Reconhecido pela excelência acadêmica, com média semestral acima de 90.',
         'Foco em Engenharia de Dados, desenvolvendo projetos com tecnologias como Python, SQL, Spark e Databricks. Estudo e aplico fundamentos sólidos de ETL/ELT, arquiteturas de dados como data lakes, data warehouses e lakehouses, Arquitetura Medallion e processamento distribuído de dados e, mais recentemente, modelagem relacional, esquemas estrela (star schema) e snowflake.',
         'Tenho experiência prática com projetos de desenvolvimento web e engenharia de dados, além de ensino voluntário. Conheço também C++, bancos de dados relacionais e plataformas de Big Data como Databricks e Apache Spark. Possuo a certificação Databricks Accreditation e inglês em nível intermediário (B1).',
       ],
       [
-        'Software Engineering student at the National Institute of Telecommunications (INATEL), currently in the 4th semester, with graduation expected in 2029. Recognized for academic excellence, with a semester average above 90.',
-        'Focused on Data Engineering, building projects with technologies like Python, SQL, Spark, and Databricks. I study and apply solid fundamentals in ETL/ELT, data architectures such as data lakes, data warehouses, and lakehouses, Medallion Architecture, and distributed data processing, and more recently relational data modeling, star schemas, and snowflake schemas.',
-        'I have hands-on experience with web development and data engineering projects, as well as volunteer teaching. I also know C++, relational databases, and Big Data platforms such as Databricks and Apache Spark. I hold the Databricks Accreditation certification and intermediate English (B1).',
+        'Software Engineering student at the National Institute of Telecommunications (Inatel), currently in the 4th semester, with graduation expected in 2029. Recognized for academic excellence, with a semester average above 90.',
+        'Focused on Data Engineering, building projects with technologies like Python, SQL, Spark, and Databricks. I study and apply solid fundamentals in ETL/ELT, data architectures such as data lakes, data warehouses, and lakehouses, Medallion Architecture, and distributed data processing. More recently, I have been studying relational data modeling, star schemas, and snowflake schemas.',
+        'I have hands-on experience with web development and data engineering projects, as well as volunteer teaching. I am also familiar with C++, relational databases, and Big Data platforms such as Databricks and Apache Spark. I hold a Databricks Accreditation and have an intermediate level of English (B1).',
       ],
     ],
-    ['#habilidades h2', ['Minha caixa de ferramentas'], ['My toolbox']],
+    ['#habilidades h2', ['Minha caixa de ferramentas'], ['My Toolbox']],
     [
       '.grp h3',
       ['Frontend', 'Backend', 'Ferramentas', 'Soft skills'],
-      ['Frontend', 'Backend', 'Tools', 'Soft skills'],
+      ['Frontend', 'Backend', 'Tools', 'Soft Skills'],
     ],
     [
       '.soft li span:last-child',
@@ -62,7 +62,7 @@
     [
       '.pg>h3',
       ['Engenharia de Dados', 'Projetos acadêmicos'],
-      ['Data Engineering', 'Academic projects'],
+      ['Data Engineering', 'Academic Projects'],
     ],
     [
       '#habilidades .lede',
@@ -95,7 +95,7 @@
         'Interface Acadêmica',
       ],
       [
-        'Batch data ingestion',
+        'Batch Data Ingestion',
         'Databricks Dimensional Modeling',
         'NYCTaxiTrips',
         'FETIN Ecomind',
@@ -105,13 +105,13 @@
     [
       '.pc .more',
       ['Ver detalhes', 'Ver detalhes', 'Ver detalhes', 'Ver detalhes', 'Ver detalhes'],
-      ['View details', 'View details', 'View details', 'View details', 'View details'],
+      ['View Details', 'View Details', 'View Details', 'View Details', 'View Details'],
     ],
-    ['.ct-h', ['Vamos construir algo juntos.'], ['Let us build something together.']],
+    ['.ct-h', ['Vamos construir algo juntos.'], ['Let’s build something together.']],
     [
       '.ct-sub',
       ['Tem um projeto, uma vaga de estágio ou uma ideia?<br>Vamos conversar.'],
-      ['Have a project, an internship opening, or an idea?<br>Let us talk.'],
+      ['Have a project, an internship opening, or an idea?<br>Let’s talk.'],
       1,
     ],
     ['.ct-t', ['Me encontre por aqui.'], ['Find me here.']],
@@ -155,6 +155,17 @@
             : 'Próximo projeto'
       );
     });
+    document.querySelector('.x').setAttribute('aria-label', l === 'en' ? 'Close' : 'Fechar');
+    document
+      .querySelector('.theme')
+      .setAttribute('aria-label', l === 'en' ? 'Toggle theme' : 'Alternar tema');
+    document.querySelector('nav').setAttribute('aria-label', l === 'en' ? 'Main' : 'Principal');
+    document
+      .querySelector('.avatar')
+      .setAttribute(
+        'aria-label',
+        l === 'en' ? 'Photo of Leonardo Prado' : 'Foto de Leonardo Prado'
+      );
     document.title = 'Leonardo Prado - Portfolio';
     var b = document.querySelector('.lang');
     b.textContent = l === 'en' ? 'PT' : 'EN';
@@ -241,14 +252,14 @@
   spy();
   var PR = {
       ing: {
-        t: ['Ingestão de dados em Batch', 'Batch data ingestion'],
+        t: ['Ingestão de dados em Batch', 'Batch Data Ingestion'],
         d: [
           'Pipeline de ingestão batch de dados de transações, com arquitetura em camadas (Source, Bronze e Silver) em um Data Lake e orquestração com Airflow.\nArquivos CSV diários de um sistema de transações são lidos com Apache Spark e gravados em tabelas Delta, que guardam o histórico de versões e garantem transações ACID.\nA carga da Source para a Bronze é idempotente: reprocessar o mesmo dia não gera duplicidade. Da Bronze para a Silver, só os registros novos ou mais recentes são processados e mesclados por upsert (merge) usando o ID da transação, o que também cobre correções tardias.\nUma DAG do Airflow orquestra todo o fluxo. O projeto foi feito com foco em estudo e aprendizado, simulando a chegada diária de dados em um Data Lake local.',
           'Batch ingestion pipeline for transaction data, with a layered architecture (Source, Bronze, and Silver) in a Data Lake and orchestration with Airflow.\nDaily CSV files from a transaction system are read with Apache Spark and written to Delta tables, which keep the version history and guarantee ACID transactions.\nThe Source to Bronze load is idempotent: reprocessing the same day does not create duplicates. From Bronze to Silver, only new or more recent records are processed and merged by upsert using the transaction ID, which also covers late corrections.\nAn Airflow DAG orchestrates the whole flow. The project was built for study and learning, simulating the daily arrival of data in a local Data Lake.',
         ],
         k: [
           ['Python', 'Apache Airflow', 'PySpark', 'Delta Lake', 'Pandas', 'Arquitetura em camadas'],
-          ['Python', 'Apache Airflow', 'PySpark', 'Delta Lake', 'Pandas', 'Layered architecture'],
+          ['Python', 'Apache Airflow', 'PySpark', 'Delta Lake', 'Pandas', 'Layered Architecture'],
         ],
         img: 'assets/projeto-ingestao-batch.svg',
         gh: 'https://github.com/LeoLPrado/IngestaoBatch',
@@ -257,7 +268,7 @@
         t: ['Modelagem Dimensional Databricks', 'Databricks Dimensional Modeling'],
         d: [
           'Data Warehouse de vendas construído do zero no Databricks, usando modelagem multidimensional (Star e Snowflake).\nA partir de um dataset sintético de 1.000 itens de pedido, gerado em Python, os dados passam pelas camadas landing e bronze, com schema explícito e métricas calculadas, até chegar ao modelo dimensional.\nO grão do modelo é o item de pedido. No Star Schema, uma tabela fato é cercada por 5 dimensões desnormalizadas; no Snowflake, as dimensões de produto e loja são normalizadas em hierarquias, chegando a 10 dimensões. Tudo é organizado no Unity Catalog, com chaves substitutas (surrogate keys).\nO mesmo modelo de negócio foi implementado nas duas abordagens para comparar, na prática, a organização das dimensões, a redundância dos dados e o número de joins nas consultas analíticas.',
-          'Sales data warehouse built from scratch on Databricks, using multidimensional modeling (Star and Snowflake).\nStarting from a synthetic dataset of 1,000 order items, generated in Python, the data goes through landing and bronze layers, with an explicit schema and calculated metrics, before reaching the dimensional model.\nThe model grain is the order item. In the Star Schema, a fact table is surrounded by 5 denormalized dimensions; in the Snowflake Schema, the product and store dimensions are normalized into hierarchies, reaching 10 dimensions. Everything is organized in Unity Catalog, using surrogate keys.\nThe same business model was implemented in both approaches to compare, in practice, how dimensions are organized, data redundancy, and the number of joins in analytical queries.',
+          'Sales data warehouse built from scratch on Databricks, using multidimensional modeling (Star and Snowflake).\nStarting from a synthetic dataset of 1,000 order items, generated in Python, the data goes through the Landing and Bronze layers, with an explicit schema and calculated metrics, before reaching the dimensional model.\nThe model’s grain is the order item. In the Star Schema, a fact table is surrounded by 5 denormalized dimensions; in the Snowflake Schema, the product and store dimensions are normalized into hierarchies, reaching 10 dimensions. Everything is organized in Unity Catalog, using surrogate keys.\nThe same business model was implemented in both approaches to compare, in practice, how dimensions are organized, data redundancy, and the number of joins in analytical queries.',
         ],
         k: [
           [
@@ -282,7 +293,7 @@
         t: ['NYCTaxiTrips', 'NYCTaxiTrips'],
         d: [
           'Pipeline de engenharia de dados no Databricks para analisar viagens de táxi amarelo de Nova York, com arquitetura Medallion (Bronze, Silver e Gold).\nOs dados brutos vêm de um dataset público do Databricks, com 10.000 viagens de dezembro de 2019. Na camada Silver, eles são limpos e transformados: colunas renomeadas, duração da viagem calculada, data e hora extraídas e tipo de pagamento normalizado.\nA camada Gold reúne KPIs de comportamento de pagamento: total de corridas, custo médio e distância média por tipo de pagamento. A análise mostrou valor médio negativo nas corridas do tipo dispute, um possível indício de estornos ou cobranças contestadas.\nTodo o fluxo é orquestrado por um Job do Databricks, que executa em sequência a configuração do ambiente, a ingestão Bronze, a transformação Silver e o cálculo dos KPIs Gold.',
-          'Data engineering pipeline on Databricks to analyze New York yellow taxi trips, using the Medallion architecture (Bronze, Silver, and Gold).\nThe raw data comes from a public Databricks dataset with 10,000 trips from December 2019. In the Silver layer, it is cleaned and transformed: columns renamed, trip duration calculated, date and time extracted, and payment type normalized.\nThe Gold layer gathers payment behavior KPIs: total trips, average cost, and average distance per payment type. The analysis showed a negative average amount for dispute trips, a possible sign of refunds or contested charges.\nThe whole flow is orchestrated by a Databricks Job, which runs the environment setup, Bronze ingestion, Silver transformation, and Gold KPI calculation in sequence.',
+          'Data engineering pipeline on Databricks to analyze New York yellow taxi trips, using the Medallion architecture (Bronze, Silver, and Gold).\nThe raw data comes from a public Databricks dataset with 10,000 trips from December 2019. In the Silver layer, it is cleaned and transformed: columns renamed, trip duration calculated, date and time extracted, and payment type normalized.\nThe Gold layer gathers payment behavior KPIs: total trips, average cost, and average distance per payment type. The analysis showed a negative average amount for the dispute payment type, a possible sign of refunds or contested charges.\nThe whole flow is orchestrated by a Databricks Job, which runs the environment setup, Bronze ingestion, Silver transformation, and Gold KPI calculation in sequence.',
         ],
         k: [
           [
@@ -476,7 +487,7 @@
     }
     function restart() {
       clearInterval(timer);
-      if (!rmq()) timer = setInterval(tick, 5500 + gi * 1500);
+      if (!rmq()) timer = setInterval(tick, 4000 + gi * 1000);
     }
     place();
     requestAnimationFrame(function () {
