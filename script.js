@@ -212,12 +212,6 @@
 
     {
     }
-    if (!rm) {
-      r.classList.add('tx');
-      setTimeout(function () {
-        r.classList.remove('tx');
-      }, 700);
-    }
     applyTheme(t);
   });
   var st, sl;
