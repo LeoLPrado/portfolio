@@ -31,27 +31,27 @@
         'Focused on practical data projects, web development, and solutions that make sense for businesses.',
       ],
     ],
-    ['.btn.main', ['Baixar currículo'], ['Download Resume']],
-    ['.btns .btn:not(.main)', ['Ver meus projetos'], ['View My Work']],
+    ['.btn.main', ['Ver meus projetos'], ['View My Work']],
+    ['.btns .btn:not(.main)', ['Contato'], ['Contact']],
     ['#sobre h2', ['Sobre'], ['About']],
     [
       '.about',
       [
         'Estudante de Engenharia de Software no Instituto Nacional de Telecomunicações (Inatel), atualmente no 4º período, com formação prevista para 2029. Reconhecido pela excelência acadêmica, com média semestral acima de 90.',
-        'Foco em Engenharia de Dados, desenvolvendo projetos com tecnologias como Python, SQL, Spark e Databricks. Estudo e aplico fundamentos sólidos de ETL/ELT, arquiteturas de dados como data lakes, data warehouses e lakehouses, Arquitetura Medallion e processamento distribuído de dados e, mais recentemente, modelagem relacional, esquemas estrela (star schema) e snowflake.',
+        'Foco em Engenharia de Dados, desenvolvendo projetos com tecnologias como Python, SQL, Spark e Databricks. Estudo e aplico fundamentos sólidos de ETL/ELT, arquiteturas de dados como data lakes, data warehouses e lakehouses, Arquitetura Medalhão e processamento distribuído de dados e, mais recentemente, modelagem relacional, esquemas estrela (star schema) e snowflake.',
         'Tenho experiência prática com projetos de desenvolvimento web e engenharia de dados, além de ensino voluntário. Conheço também C++, bancos de dados relacionais e plataformas de Big Data como Databricks e Apache Spark. Possuo a certificação Databricks Accreditation e inglês em nível intermediário (B1).',
       ],
       [
         'Software Engineering student at the National Institute of Telecommunications (Inatel), currently in the 4th semester, with graduation expected in 2029. Recognized for academic excellence, with a semester average above 90.',
-        'Focused on Data Engineering, building projects with technologies like Python, SQL, Spark, and Databricks. I study and apply solid fundamentals in ETL/ELT, data architectures such as data lakes, data warehouses, and lakehouses, Medallion Architecture, and distributed data processing. More recently, I have been studying relational data modeling, star schemas, and snowflake schemas.',
+        'Focused on Data Engineering, building projects with technologies such as Python, SQL, Spark, and Databricks. I study and apply solid fundamentals in ETL/ELT, data architectures such as data lakes, data warehouses, and lakehouses, Medallion Architecture, and distributed data processing. More recently, I have been studying relational data modeling, star schemas, and snowflake schemas.',
         'I have hands-on experience with web development and data engineering projects, as well as volunteer teaching. I am also familiar with C++, relational databases, and Big Data platforms such as Databricks and Apache Spark. I hold a Databricks Accreditation and have an intermediate level of English (B1).',
       ],
     ],
     ['#habilidades h2', ['Minha caixa de ferramentas'], ['My Toolbox']],
     [
       '.grp h3',
-      ['Frontend', 'Backend', 'Ferramentas', 'Soft skills'],
-      ['Frontend', 'Backend', 'Tools', 'Soft Skills'],
+      ['Front-end', 'Back-end', 'Ferramentas', 'Soft skills'],
+      ['Front-end', 'Back-end', 'Tools', 'Soft Skills'],
     ],
     [
       '.soft li span:last-child',
@@ -88,15 +88,15 @@
     [
       '.pc .h',
       [
-        'Ingestão de dados em Batch',
-        'Modelagem Dimensional Databricks',
+        'Ingestão de Dados em Batch',
+        'Modelagem Dimensional no Databricks',
         'NYCTaxiTrips',
         'FETIN Ecomind',
         'Interface Acadêmica',
       ],
       [
         'Batch Data Ingestion',
-        'Databricks Dimensional Modeling',
+        'Dimensional Modeling on Databricks',
         'NYCTaxiTrips',
         'FETIN Ecomind',
         'Academic Interface',
@@ -114,7 +114,7 @@
       ['Have a project, an internship opening, or an idea?<br>Let’s talk.'],
       1,
     ],
-    ['.ct-t', ['Me encontre por aqui.'], ['Find me here.']],
+    ['.ct-t', ['Encontre-me por aqui.'], ['Find me here.']],
     [
       '.ct-d',
       [
@@ -122,7 +122,7 @@
       ],
       ['To talk about data, software, technology, or internship opportunities, get in touch.'],
     ],
-    ['.ct-row .ct-l', ['Email', 'WhatsApp', 'Localização'], ['Email', 'WhatsApp', 'Location']],
+    ['.ct-row .ct-l', ['E-mail', 'WhatsApp', 'Localização'], ['Email', 'WhatsApp', 'Location']],
     ['.ct-loc', ['Santa Rita do Sapucaí, MG, Brasil'], ['Santa Rita do Sapucaí, MG, Brazil']],
   ];
   function put(el, t, h) {
@@ -246,10 +246,10 @@
   spy();
   var PR = {
       ing: {
-        t: ['Ingestão de dados em Batch', 'Batch Data Ingestion'],
+        t: ['Ingestão de Dados em Batch', 'Batch Data Ingestion'],
         d: [
-          'Desenvolvi um projeto de engenharia de dados que simula a ingestão diária de arquivos CSV de um sistema de transações, com um pipeline ELT em batch, arquitetura em camadas (Source, Bronze e Silver) em um Data Lake e orquestração com Airflow.\nRealizei a extração dos arquivos CSV da fonte (Source), lidos com Apache Spark, e o carregamento na camada Bronze, em tabelas Delta que guardam o histórico de versões e garantem transações ACID, para depois transformá-los e movê-los para a Silver, seguindo o padrão ELT.\nOrganizei os dados em camadas, conforme a arquitetura Medallion, onde cada camada representa a finalidade e qualidade do dado. A carga da Source para a Bronze é idempotente: reprocessar o mesmo dia não gera duplicidade. Da Bronze para a Silver, só os registros novos ou mais recentes são processados e mesclados por merge (upsert) usando o ID da transação, o que trata registros duplicados e também cobre correções tardias.\nOrquestrei e agendei todo o fluxo com uma DAG do Airflow. O projeto foi feito com foco em estudo e aprendizado, simulando a chegada diária de dados em um Data Lake local.',
-          'I developed a data engineering project that simulates the daily ingestion of CSV files from a transaction system, with a batch ELT pipeline, a layered architecture (Source, Bronze, and Silver) in a Data Lake, and orchestration with Airflow.\nI handled the extraction of the CSV files from the Source, read with Apache Spark, and their loading into the Bronze layer, in Delta tables that keep the version history and guarantee ACID transactions, to then transform them and move them to Silver, following the ELT pattern.\nI organized the data in layers, following the Medallion architecture, where each layer represents the purpose and quality of the data. The Source to Bronze load is idempotent: reprocessing the same day does not create duplicates. From Bronze to Silver, only new or more recent records are processed and merged by upsert using the transaction ID, which handles duplicate records and also covers late corrections.\nI orchestrated and scheduled the whole flow with an Airflow DAG. The project was built for study and learning, simulating the daily arrival of data in a local Data Lake.',
+          'Desenvolvi um projeto de engenharia de dados que simula a ingestão diária de arquivos CSV de um sistema de transações, com um pipeline ELT em batch, arquitetura em camadas (Source, Bronze e Silver) em um data lake e orquestração com Airflow.\nRealizei a extração dos arquivos CSV da fonte (Source), lidos com Apache Spark, e o carregamento na camada Bronze, em tabelas Delta que guardam o histórico de versões e garantem transações ACID, para depois transformá-los e movê-los para a Silver, seguindo o padrão ELT.\nOrganizei os dados em camadas, conforme a arquitetura Medalhão, onde cada camada representa a finalidade e qualidade do dado. A carga da Source para a Bronze é idempotente: reprocessar o mesmo dia não gera duplicidade. Da Bronze para a Silver, só os registros novos ou mais recentes são processados e mesclados por meio de merge (upsert) usando o ID da transação, o que trata registros duplicados e também cobre correções tardias.\nOrquestrei e agendei todo o fluxo com uma DAG do Airflow. O projeto foi feito com foco em estudo e aprendizado, simulando a chegada diária de dados em um data lake local.',
+          'I developed a data engineering project that simulates the daily ingestion of CSV files from a transaction system, with a batch ELT pipeline, a layered architecture (Source, Bronze, and Silver) in a data lake, and orchestration with Airflow.\nI handled the extraction of the CSV files from the source (Source), read with Apache Spark, and their loading into the Bronze layer, in Delta tables that keep the version history and guarantee ACID transactions, to then transform them and move them to the Silver layer, following the ELT pattern.\nI organized the data in layers, following the Medallion architecture, where each layer represents the purpose and quality of the data. The Source to Bronze load is idempotent: reprocessing the same day does not create duplicates. From Bronze to Silver, only new or more recent records are processed and merged by upsert using the transaction ID, which handles duplicate records and also covers late corrections.\nI orchestrated and scheduled the whole flow with an Airflow DAG. The project was built for study and learning, simulating the daily arrival of data in a local data lake.',
         ],
         k: [
           ['Python', 'Apache Airflow', 'PySpark', 'Delta Lake', 'Pandas', 'Arquitetura em camadas'],
@@ -259,10 +259,10 @@
         gh: 'https://github.com/LeoLPrado/IngestaoBatch',
       },
       dw: {
-        t: ['Modelagem Dimensional Databricks', 'Databricks Dimensional Modeling'],
+        t: ['Modelagem Dimensional no Databricks', 'Dimensional Modeling on Databricks'],
         d: [
-          'Desenvolvi um Data Warehouse de vendas do zero no Databricks, com dados organizados em camadas (Arquitetura Medalhão) e armazenados em formato Delta, usando modelagem dimensional (Star e Snowflake).\nA partir de um dataset sintético de 1.000 itens de pedido, gerado em Python, os dados passam pelas camadas Landing e Bronze, com schema explícito e métricas calculadas, até chegar ao modelo dimensional na camada Gold.\nNa camada Gold, implementei o mesmo modelo de negócio em duas abordagens de modelagem dimensional (tabelas fatos e dimensões). O grão é o item de pedido: no Star Schema, uma tabela fato é cercada por 5 dimensões desnormalizadas; no Snowflake Schema, as dimensões de produto e loja são normalizadas em hierarquias, chegando a 10 dimensões. Tudo é organizado no Unity Catalog, com chaves substitutas (surrogate keys).\nComparei, na prática, a organização das dimensões, a redundância dos dados (normalização) e o número de joins e a complexidade das consultas analíticas entre a modelagem estrela e a modelagem floco de neve, e documentei o projeto por completo, com diagramas e comparativo entre as duas abordagens.',
-          'I developed a sales data warehouse from scratch on Databricks, with data organized in layers (Medallion Architecture) and stored in Delta format, using dimensional modeling (Star and Snowflake).\nStarting from a synthetic dataset of 1,000 order items, generated in Python, the data goes through the Landing and Bronze layers, with an explicit schema and calculated metrics, before reaching the dimensional model in the Gold layer.\nIn the Gold layer, I implemented the same business model in two dimensional modeling approaches (fact and dimension tables). The grain is the order item: in the Star Schema, a fact table is surrounded by 5 denormalized dimensions; in the Snowflake Schema, the product and store dimensions are normalized into hierarchies, reaching 10 dimensions. Everything is organized in Unity Catalog, using surrogate keys.\nI compared, in practice, how dimensions are organized, data redundancy (normalization), and the number of joins and complexity of analytical queries between the star and snowflake models, and documented the whole project with diagrams and a comparison between the two approaches.',
+          'Desenvolvi um data warehouse de vendas do zero no Databricks, com dados organizados em camadas (Arquitetura Medalhão) e armazenados em formato Delta, usando modelagem dimensional (Star e Snowflake).\nA partir de um dataset sintético de 1.000 itens de pedido, gerado em Python, os dados passam pelas camadas Landing e Bronze, com schema explícito e métricas calculadas, até chegar ao modelo dimensional na camada Gold.\nNa camada Gold, implementei o mesmo modelo de negócio em duas abordagens de modelagem dimensional (tabelas fato e dimensão). O grão é o item de pedido: no Star Schema, uma tabela fato é cercada por cinco dimensões desnormalizadas; no Snowflake Schema, as dimensões de produto e loja são normalizadas em hierarquias, chegando a dez dimensões. Tudo é organizado no Unity Catalog, com chaves substitutas (surrogate keys).\nComparei, na prática, a organização das dimensões, a redundância dos dados (normalização) e a complexidade das consultas analíticas (número de joins) entre a modelagem estrela e a modelagem floco de neve, e documentei o projeto por completo, com diagramas e comparativo entre as duas abordagens.',
+          'I developed a sales data warehouse from scratch on Databricks, with data organized in layers (Medallion Architecture) and stored in Delta format, using dimensional modeling (Star and Snowflake).\nStarting from a synthetic dataset of 1,000 order items, generated in Python, the data goes through the Landing and Bronze layers, with an explicit schema and calculated metrics, before reaching the dimensional model in the Gold layer.\nIn the Gold layer, I implemented the same business model in two dimensional modeling approaches (fact and dimension tables). The grain is the order item: in the Star Schema, a fact table is surrounded by five denormalized dimensions; in the Snowflake Schema, the product and store dimensions are normalized into hierarchies, reaching ten dimensions. Everything is organized in Unity Catalog, using surrogate keys.\nI compared, in practice, the organization of the dimensions, data redundancy (normalization), and the complexity of analytical queries (number of joins) between the star and snowflake models, and documented the whole project, with diagrams and a comparison of the two approaches.',
         ],
         k: [
           [
@@ -286,18 +286,11 @@
       nyc: {
         t: ['NYCTaxiTrips', 'NYCTaxiTrips'],
         d: [
-          'Pipeline de engenharia de dados no Databricks para analisar viagens de táxi amarelo de Nova York, com arquitetura Medallion (Bronze, Silver e Gold).\nOs dados brutos vêm de um dataset público do Databricks, com 10.000 viagens de dezembro de 2019. Na camada Silver, eles são limpos e transformados: colunas renomeadas, duração da viagem calculada, data e hora extraídas e tipo de pagamento normalizado.\nA camada Gold reúne KPIs de comportamento de pagamento: total de corridas, custo médio e distância média por tipo de pagamento. A análise mostrou valor médio negativo nas corridas do tipo dispute, um possível indício de estornos ou cobranças contestadas.\nTodo o fluxo é orquestrado por um Job do Databricks, que executa em sequência a configuração do ambiente, a ingestão Bronze, a transformação Silver e o cálculo dos KPIs Gold.',
+          'Pipeline de engenharia de dados no Databricks para analisar viagens de táxi amarelo de Nova York, com arquitetura Medalhão (Bronze, Silver e Gold).\nOs dados brutos vêm de um dataset público do Databricks, com 10.000 viagens de dezembro de 2019. Na camada Silver, eles são limpos e transformados: colunas renomeadas, duração da viagem calculada, data e hora extraídas e tipo de pagamento normalizado.\nA camada Gold reúne KPIs de comportamento de pagamento: total de corridas, custo médio e distância média por tipo de pagamento. A análise mostrou valor médio negativo nas corridas do tipo dispute, um possível indício de estornos ou cobranças contestadas.\nTodo o fluxo é orquestrado por um Job do Databricks, que executa em sequência a configuração do ambiente, a ingestão Bronze, a transformação Silver e o cálculo dos KPIs Gold.',
           'Data engineering pipeline on Databricks to analyze New York yellow taxi trips, using the Medallion architecture (Bronze, Silver, and Gold).\nThe raw data comes from a public Databricks dataset with 10,000 trips from December 2019. In the Silver layer, it is cleaned and transformed: columns renamed, trip duration calculated, date and time extracted, and payment type normalized.\nThe Gold layer gathers payment behavior KPIs: total trips, average cost, and average distance per payment type. The analysis showed a negative average amount for the dispute payment type, a possible sign of refunds or contested charges.\nThe whole flow is orchestrated by a Databricks Job, which runs the environment setup, Bronze ingestion, Silver transformation, and Gold KPI calculation in sequence.',
         ],
         k: [
-          [
-            'Databricks',
-            'PySpark',
-            'SQL',
-            'Delta Lake',
-            'Arquitetura Medallion',
-            'Databricks Jobs',
-          ],
+          ['Databricks', 'PySpark', 'SQL', 'Delta Lake', 'Arquitetura Medalhão', 'Databricks Jobs'],
           [
             'Databricks',
             'PySpark',

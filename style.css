@@ -599,6 +599,17 @@ h1 {
 body.lock {
   overflow: hidden;
 }
+.pc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.pc .img {
+  flex: 1 0 auto;
+}
+.pc .body {
+  flex: none;
+}
 .avatar {
   background-size: cover;
   background-position: center;
