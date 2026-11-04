@@ -316,14 +316,27 @@
         img: 'assets/projeto-fetin-ecomind.svg',
         gh: '',
       },
-      ia: {
+       ia: {
         t: ['Interface Acadêmica', 'Academic Interface'],
         d: null,
         img: 'assets/projeto-interface-academica.svg',
         gh: '',
       },
+      inatel: {
+        t: ['App do Inatel', 'Inatel App'],
+        d: [
+          'Projeto desenvolvido como trabalho final da disciplina de Interação Homem-Máquina (S05 - IHM) do Inatel. Ao longo do semestre, foram aplicados conceitos de Interação Humano-Computador (IHC) e UX Design, passando por etapas como análise de tarefas, criação de User Stories, desenvolvimento de wireframes e modelagem de objetos utilizando UML.\nComo etapa final do projeto, desenvolvi a funcionalidade de Mercado de Trabalho, com foco em conectar os alunos às oportunidades profissionais e apresentar informações relevantes sobre o mercado de trabalho. O desenvolvimento envolveu JavaScript, HTML e CSS, além da aplicação de conceitos de usabilidade e design de interfaces.',
+          'Project developed as the final assignment for the Human-Computer Interaction course (S05 - IHM) at Inatel. Throughout the semester, Human-Computer Interaction (HCI) and UX Design concepts were applied, covering stages such as task analysis, User Stories creation, wireframe development, and object modeling using UML.\nAs the final stage of the project, I developed the Job Market feature, focusing on connecting students with professional opportunities and presenting relevant information about the job market. Development involved JavaScript, HTML, and CSS, along with the application of usability and interface design concepts.',
+        ],
+        k: [
+          ['JavaScript', 'HTML', 'CSS', 'UML', 'IHC', 'UX Design', 'Usabilidade', 'Design de Interfaces'],
+          ['JavaScript', 'HTML', 'CSS', 'UML', 'HCI', 'UX Design', 'Usability', 'Interface Design'],
+        ],
+        img: 'assets/projeto-app-inatel.svg',
+        gh: 'https://github.com/LeoLPrado/Dashboard-App-Inatel',
+        site: 'https://leolprado.github.io/Dashboard-App-Inatel/',
+      },
     },
-    SOON = ['Descrição em breve.', 'Description coming soon.'];
   var ov = document.getElementById('ov'),
     pnl = ov.querySelector('.pnl'),
     last = null,
