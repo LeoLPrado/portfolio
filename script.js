@@ -244,6 +244,7 @@
   addEventListener('scroll', spy, { passive: true });
   addEventListener('resize', spy);
   spy();
+  var SOON = ['Descrição em breve.', 'Description coming soon.'];
   var PR = {
       ing: {
         t: ['Ingestão de Dados em Batch', 'Batch Data Ingestion'],
@@ -336,7 +337,7 @@
         gh: 'https://github.com/LeoLPrado/Dashboard-App-Inatel',
         site: 'https://leolprado.github.io/Dashboard-App-Inatel/',
       },
-    },
+    };
   var ov = document.getElementById('ov'),
     pnl = ov.querySelector('.pnl'),
     last = null,
