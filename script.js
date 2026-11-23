@@ -365,11 +365,12 @@
     document.getElementById('pt').textContent = P.t[i];
     var D2 = document.getElementById('pd');
     D2.textContent = '';
-    (P.d ? P.d[i] : SOON[i]).split('\n').forEach(function (t) {
-      var q = document.createElement('p');
-      q.textContent = t;
-      D2.appendChild(q);
-    });
+    if (P.d)
+      P.d[i].split('\n').forEach(function (t) {
+        var q = document.createElement('p');
+        q.textContent = t;
+        D2.appendChild(q);
+      });
     var K = document.getElementById('pk');
     K.textContent = '';
     K.hidden = !P.k;
